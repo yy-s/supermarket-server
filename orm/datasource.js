@@ -1,6 +1,7 @@
 const _ = require('lodash')
-var MongoClient = require('mongodb').MongoClient;
-var url = 'mongodb://localhost:27017/supermarket';
+const mongoose = require('mongoose')
+const db = mongoose.connection
+const schema = require('./schema')
 
 module.exports = {
 	createData,
@@ -9,61 +10,34 @@ module.exports = {
 	deleteData
 }
 
-// MongoClient.connect(url, function (err, db) {
-// 	if (err) throw err;
-// 	console.log('数据库已创建');
-// 	var dbase = db.db("runoob");
-// 	dbase.createCollection('site', function (err, res) {
-// 		if (err) throw err;
-// 		console.log("创建集合!");
-// 		db.close();
-// 	});
-// });
-
-function createData(col, data) {
-	MongoClient.connect(url, function(err, db) {
-		if (err) throw err
-		var dbo = db.db("supermarket")
-		dbo.collection("col").insertOne(data, function(err, res) {
-			if (err) throw err
-			console.log("数据插入成功")
-			db.close()
-		})
-	})
+async function createData(col, data) {
+	let model = db.model(col, schema[col])
+	let entity = new model(data)
+	let result = entity['_doc']
+	entity.save()
+	return result
 }
 
-function updateData(col, whereStr, updateStr) {
-	MongoClient.connect(url, function(err, db) {
-		if (err) throw err
-		var dbo = db.db("supermarket")
-		dbo.collection("col").updateOne(whereStr, updateStr, function(err, res) {
-			if (err) throw err
-			console.log("数据更新成功")
-			db.close()
-		})
-	})
+async function updateData(col, whereStr, updateStr) {
+	let result
+	let model = db.model(col, schema[col])
+	result = await model.update(whereStr, updateStr)
+	return result
 }
 
-function retrieveData(col, whereStr) {
-	MongoClient.connect(url, function(err, db) {
-		if (err) throw err
-		var dbo = db.db("supermarket")
-		dbo.collection("col").find(whereStr).toArray(function(err, result) {
-			if (err) throw err
-			console.log(result)
-			db.close()
-		})
+async function retrieveData(col, whereStr) {
+	let result = []
+	let model = db.model(col, schema[col])
+	let res = await model.find(whereStr)
+	_.each(res, (single) => {
+		result.push(single['_doc'])
 	})
+	return result
 }
 
-function deleteData(col, whereStr) {
-	MongoClient.connect(url, function(err, db) {
-		if (err) throw err
-		var dbo = db.db("supermarket")
-		dbo.collection("col").deleteOne(whereStr, function(err, obj) {
-			if (err) throw err
-			console.log("数据删除成功")
-			db.close()
-		})
-	})
+async function deleteData(col, whereStr) {
+	let result
+	let model = db.model(col, schema[col])
+	result = await model.remove(whereStr)
+	return result
 }

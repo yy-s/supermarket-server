@@ -7,8 +7,18 @@ const bodyParser = require('body-parser')
 const onFinished = require('on-finished')
 const cookieParser = require('cookie-parser')
 const expressValidator = require('express-validator')
-var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/supermarket";
+// var MongoClient = require('mongodb').MongoClient;
+// var url = "mongodb://localhost:27017/supermarket"
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/supermarket')
+const schema = require('./orm/schema')
+
+// 连接数据库
+var db = mongoose.connection
+db.on('error',console.error.bind(console,'连接错误:'));
+db.once('open',function() {
+	//一次打开记录
+})
 
 const HTTP_PORT = process.env.HTTP_PORT || 5000
 
@@ -34,13 +44,13 @@ app.use(function (req, res, next) {
 	next()
 })
 
-MongoClient.connect(url, function(err, db) {
-	if (err) throw err;
-	console.log("数据库连接成功!");
-	db.close();
-});
-
-let base = ['@User', '@Supplier']
+// MongoClient.connect(url, function(err, db) {
+// 	if (err) throw err;
+// 	console.log("数据库连接成功!");
+// 	db.close();
+// });
+//
+// let base = ['@User', '@Supplier']
 // _.each(base, (col) => {
 // 	MongoClient.connect(url, function (err, db) {
 // 		if (err) throw err
