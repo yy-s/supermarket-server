@@ -9,4 +9,6 @@ router.post('/getCom', ctrls.supermarket.fetchCommodity)
 router.post('/editCom', ctrls.supermarket.editCommodity)
 router.post('/delCom', ctrls.supermarket.delCommodity)
 
+router.get('/test', ctrls.test.demo)
+
 module.exports = router
