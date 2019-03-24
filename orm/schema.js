@@ -34,13 +34,31 @@ let Contract = new mongoose.Schema({
 		LRDate: Date,
 		CXQ: String
 })
+// 订单
 let Order = new mongoose.Schema({
-
+		orderName: String,
+		orderID: String,
+		price: String,
+		SHPerson: String,
+		LRPerson: String,
+		purchaseID: String,
+		date: Date
+})
+// 供应商
+let Supplier = new mongoose.Schema({
+		SName: String,
+		address: String,
+		tel: String,
+		comm: String,
+		startDate: Date,
+		status: String
 })
 
 module.exports = {
 		User,
 		Commodity,
 		Purchase,
-		Contract
+		Contract,
+		Order,
+		Supplier
 }
