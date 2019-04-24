@@ -21,7 +21,7 @@ let Commodity = new mongoose.Schema({
 let Purchase = new mongoose.Schema({
 		orderName: String,
 		orderID: Number,
-		CGDate: Date,
+		CGDate: String,
 		LRDate: Date,
 		CDPerson: String,
 		SHPerson: String,
