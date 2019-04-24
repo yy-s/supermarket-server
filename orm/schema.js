@@ -31,8 +31,11 @@ let Purchase = new mongoose.Schema({
 let Contract = new mongoose.Schema({
 		CID: Number,
 		QDDate: Date,
+		HeZuoFang: String,
+		PurchaseID: Number,
 		LRDate: Date,
-		CXQ: String
+		CXQ: String,
+		type: Number
 })
 // 订单
 let Order = new mongoose.Schema({
