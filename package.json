@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "DEBUG=*, DEFAULT_TIMEOUT=2000 NODE_ENV=development nodemon $NODE_DEBUG_OPTION --max_old_space_size=2048 index.js"
+    "dev": "index.js"
   },
   "author": "",
   "license": "ISC",
