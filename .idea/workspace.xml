@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="df36f9a7-58bf-4243-8c89-0505659e5808" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ctrls/supermarket.js" beforeDir="false" afterPath="$PROJECT_DIR$/ctrls/supermarket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/supermarket.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/supermarket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orm/schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/orm/schema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/v1/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/v1/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,8 +26,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/orm/schema.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+            <state relative-caret-position="297">
+              <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
               <folding>
                 <element signature="e#75#145#0" />
                 <element signature="e#189#311#0" />
@@ -42,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/v1/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="27" column="52" lean-forward="true" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+            <state relative-caret-position="729">
+              <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -51,7 +48,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ctrls/supermarket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
+            <state relative-caret-position="2457">
               <caret line="279" column="51" selection-start-line="279" selection-start-column="39" selection-end-line="279" selection-end-column="51" />
               <folding>
                 <element signature="e#130#537#0" />
@@ -116,26 +113,15 @@
                 <element signature="e#5532#5605#0" />
                 <element signature="e#5646#5707#0" />
                 <element signature="e#5725#5801#0" />
-                <element signature="e#5906#5910#0" />
-                <element signature="e#5960#6349#0" />
-                <element signature="e#6085#6163#0" />
-                <element signature="e#6204#6255#0" />
-                <element signature="e#6273#6347#0" />
-                <element signature="e#6400#6958#0" />
-                <element signature="e#6652#6771#0" />
-                <element signature="e#6687#6760#0" />
-                <element signature="e#6801#6862#0" />
-                <element signature="e#6880#6956#0" />
-                <element signature="e#7061#7065#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/supermarket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
+            <state relative-caret-position="2673">
               <caret line="176" lean-forward="true" selection-start-line="176" selection-end-line="176" />
               <folding>
                 <element signature="n#!!block;n#addCommodity#0" />
@@ -156,8 +142,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+            <state relative-caret-position="243">
+              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/development.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="99" column="23" selection-start-line="99" selection-start-column="23" selection-end-line="99" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -177,20 +181,20 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/config/index.js" />
-        <option value="$PROJECT_DIR$/config/development.js" />
         <option value="$PROJECT_DIR$/ctrls/common.js" />
         <option value="$PROJECT_DIR$/routes/v1/index.js" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/model/login.js" />
         <option value="$PROJECT_DIR$/ctrls/login.js" />
         <option value="$PROJECT_DIR$/orm/datasource.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/ctrls/test.js" />
         <option value="$PROJECT_DIR$/model/test.js" />
         <option value="$PROJECT_DIR$/routes/v1/router.js" />
-        <option value="$PROJECT_DIR$/orm/schema.js" />
         <option value="$PROJECT_DIR$/ctrls/supermarket.js" />
         <option value="$PROJECT_DIR$/model/supermarket.js" />
+        <option value="$PROJECT_DIR$/orm/schema.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/config/development.js" />
       </list>
     </option>
   </component>
@@ -224,28 +228,7 @@
             <path>
               <item name="supermarket-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="supermarket-server" type="462c0819:PsiDirectoryNode" />
-              <item name="ctrls" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="supermarket-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="supermarket-server" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="supermarket-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="supermarket-server" type="462c0819:PsiDirectoryNode" />
-              <item name="orm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="supermarket-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="supermarket-server" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="supermarket-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="supermarket-server" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="v1" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -308,7 +291,8 @@
       <workItem from="1553235969123" duration="1057000" />
       <workItem from="1553246252412" duration="2276000" />
       <workItem from="1555420092324" duration="1400000" />
-      <workItem from="1556119166873" duration="5940000" />
+      <workItem from="1556119166873" duration="6828000" />
+      <workItem from="1556182622530" duration="830000" />
     </task>
     <task id="LOCAL-00001" summary="初始化项目">
       <created>1550047896524</created>
@@ -352,11 +336,32 @@
       <option name="project" value="LOCAL" />
       <updated>1553407651742</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="超市接口done">
+      <created>1556133664520</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1556133664520</updated>
+    </task>
+    <task id="LOCAL-00008" summary="CGDate String">
+      <created>1556135200115</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1556135200115</updated>
+    </task>
+    <task id="LOCAL-00009" summary="del DEBUG">
+      <created>1556183023654</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1556183023654</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70924000" />
+    <option name="totallyTimeSpent" value="72642000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -366,14 +371,14 @@
       <window_info id="npm" order="1" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4991274" visible="true" weight="0.14235377" />
       <window_info id="Structure" order="3" sideWeight="0.5008726" side_tool="true" weight="0.24947146" />
-      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.4989429" weight="0.19848293" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" sideWeight="0.4989429" visible="true" weight="0.5107459" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5010571" side_tool="true" weight="0.32996207" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.32996207" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32996207" />
       <window_info anchor="bottom" id="Run" order="6" />
-      <window_info active="true" anchor="bottom" id="Debug" order="7" visible="true" weight="0.39949432" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.39949432" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
@@ -412,7 +417,10 @@
     <MESSAGE value="Schema.js" />
     <MESSAGE value="del test.js" />
     <MESSAGE value="供应商接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="供应商接口" />
+    <MESSAGE value="超市接口done" />
+    <MESSAGE value="CGDate String" />
+    <MESSAGE value="del DEBUG" />
+    <option name="LAST_COMMIT_MESSAGE" value="del DEBUG" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/index.js">
@@ -444,20 +452,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/development.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="11" selection-start-line="11" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -484,17 +478,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/test.js" />
     <entry file="file://$PROJECT_DIR$/ctrls/test.js" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/orm/schema.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+        <state relative-caret-position="297">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
           <folding>
             <element signature="e#75#145#0" />
             <element signature="e#189#311#0" />
@@ -504,14 +491,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/v1/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="27" column="52" lean-forward="true" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+        <state relative-caret-position="729">
+          <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ctrls/supermarket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
+        <state relative-caret-position="2457">
           <caret line="279" column="51" selection-start-line="279" selection-start-column="39" selection-end-line="279" selection-end-column="51" />
           <folding>
             <element signature="e#130#537#0" />
@@ -576,24 +563,13 @@
             <element signature="e#5532#5605#0" />
             <element signature="e#5646#5707#0" />
             <element signature="e#5725#5801#0" />
-            <element signature="e#5906#5910#0" />
-            <element signature="e#5960#6349#0" />
-            <element signature="e#6085#6163#0" />
-            <element signature="e#6204#6255#0" />
-            <element signature="e#6273#6347#0" />
-            <element signature="e#6400#6958#0" />
-            <element signature="e#6652#6771#0" />
-            <element signature="e#6687#6760#0" />
-            <element signature="e#6801#6862#0" />
-            <element signature="e#6880#6956#0" />
-            <element signature="e#7061#7065#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/supermarket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
+        <state relative-caret-position="2673">
           <caret line="176" lean-forward="true" selection-start-line="176" selection-end-line="176" />
           <folding>
             <element signature="n#!!block;n#addCommodity#0" />
@@ -607,6 +583,27 @@
             <element signature="n#!!block;n#addPurchase#0" />
             <element signature="n#!!block;n#fetchContract#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="99" column="23" selection-start-line="99" selection-start-column="23" selection-end-line="99" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/development.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
