@@ -20,11 +20,11 @@ exports.addCommodity = async function (req, res) {
     }
 }
 exports.fetchCommodity = async function (req, res) {
-    let {page, pageSize, search} = req.body
+    let {page, pageSize, search, by} = req.body
     try {
         let start = (page - 1) * pageSize
         let stop = page * pageSize
-        let result = await superMarket.fetchCommodity(start, stop, search)
+        let result = await superMarket.fetchCommodity(start, stop, search, by)
         if (!result || _.size(result) === 0) {
             res.status(200).json({
                 'code': 3,
@@ -86,11 +86,11 @@ exports.addSupplier = async function (req, res) {
     }
 }
 exports.fetchSupplier = async function (req, res) {
-    let {page, pageSize, search} = req.body
+    let {page, pageSize, search, by} = req.body
     try {
         let start = (page - 1) * pageSize
         let stop = page * pageSize
-        let result = await superMarket.fetchSupplier(start, stop, search)
+        let result = await superMarket.fetchSupplier(start, stop, search, by)
         if (!result || _.size(result) === 0) {
             res.status(200).json({
                 'code': 3,
@@ -152,11 +152,11 @@ exports.addOrder = async function (req, res) {
     }
 }
 exports.fetchOrder = async function (req, res) {
-    let {page, pageSize, search} = req.body
+    let {page, pageSize, search, status, by} = req.body
     try {
         let start = (page - 1) * pageSize
         let stop = page * pageSize
-        let result = await superMarket.fetchOrder(start, stop, search)
+        let result = await superMarket.fetchOrder(start, stop, search, status, by)
         if (!result || _.size(result) === 0) {
             res.status(200).json({
                 'code': 3,
@@ -173,7 +173,17 @@ exports.fetchOrder = async function (req, res) {
     }
 }
 exports.editOrder = async function (req, res) {
-
+    let {whereStr, updateStr} = req.body
+    try {
+        let result = await superMarket.editOrder(whereStr, updateStr)
+        res.status(200).json({
+            'code': 0,
+            'data': result
+        })
+    } catch (e) {
+        console.log('editSupplier', e)
+        res.status(500).json(e)
+    }
 }
 exports.delOrder = async function (res, res) {
 
@@ -198,11 +208,11 @@ exports.addPurchase = async function (req, res) {
     }
 }
 exports.fetchPurchase = async function (req, res) {
-    let {page, pageSize, search} = req.body
+    let {page, pageSize, search, searchid, by} = req.body
     try {
         let start = (page - 1) * pageSize
         let stop = page * pageSize
-        let result = await superMarket.fetchPurchase(start, stop, search)
+        let result = await superMarket.fetchPurchase(start, stop, search, searchid, by)
         if (!result || _.size(result) === 0) {
             res.status(200).json({
                 'code': 3,
@@ -254,11 +264,11 @@ exports.addContract = async function (req, res) {
     }
 }
 exports.fetchContract = async function (req, res) {
-    let {page, pageSize, search, action} = req.body
+    let {page, pageSize, search, action, by} = req.body
     try {
         let start = (page - 1) * pageSize
         let stop = page * pageSize
-        let result = await superMarket.fetchContract(start, stop, search, action)
+        let result = await superMarket.fetchContract(start, stop, search, action, by)
         if (!result || _.size(result) === 0) {
             res.status(200).json({
                 'code': 3,

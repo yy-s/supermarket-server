@@ -15,7 +15,8 @@ let Commodity = new mongoose.Schema({
 		JPrice: Number,
 		SPrice: Number,
 		supplier: String,
-		count: Number
+		count: Number,
+		By: String
 })
 // 采购记录
 let Purchase = new mongoose.Schema({
@@ -25,7 +26,8 @@ let Purchase = new mongoose.Schema({
 		LRDate: Date,
 		CDPerson: String,
 		SHPerson: String,
-		LRPerson: String
+		LRPerson: String,
+    By: String
 })
 // 合同
 let Contract = new mongoose.Schema({
@@ -35,7 +37,8 @@ let Contract = new mongoose.Schema({
 		PurchaseID: Number,
 		LRDate: Date,
 		CXQ: String,
-		type: Number
+		type: Number,
+    By: String
 })
 // 订单
 let Order = new mongoose.Schema({
@@ -45,7 +48,11 @@ let Order = new mongoose.Schema({
 		SHPerson: String,
 		LRPerson: String,
 		purchaseID: String,
-		date: Date
+		date: Date,
+		action: Number,
+		status: Number,
+		supplier: String,
+    By: String
 })
 // 供应商
 let Supplier = new mongoose.Schema({
@@ -54,7 +61,8 @@ let Supplier = new mongoose.Schema({
 		tel: String,
 		comm: String,
 		startDate: Date,
-		status: String
+		status: String,
+    By: String
 })
 
 module.exports = {

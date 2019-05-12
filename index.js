@@ -44,25 +44,6 @@ app.use(function (req, res, next) {
 	next()
 })
 
-// MongoClient.connect(url, function(err, db) {
-// 	if (err) throw err;
-// 	console.log("数据库连接成功!");
-// 	db.close();
-// });
-//
-// let base = ['@User', '@Supplier']
-// _.each(base, (col) => {
-// 	MongoClient.connect(url, function (err, db) {
-// 		if (err) throw err
-// 		var dbase = db.db("supermarket")
-// 		dbase.createCollection(col, function (err, res) {
-// 			if (err) throw err
-// 			console.log(col + "创建成功!")
-// 			db.close()
-// 		})
-// 	})
-// })
-
 require('./routes/v1')(app)
 
 app.use(function(req, res, next) {

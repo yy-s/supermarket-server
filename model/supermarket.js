@@ -12,6 +12,7 @@ module.exports = {
     delSupplier,
     addOrder,
     fetchOrder,
+    editOrder,
     addPurchase,
     fetchPurchase,
     editPurchase,
@@ -25,9 +26,12 @@ async function addCommodity(params) {
     return !!info['_id']
 }
 
-async function fetchCommodity(start, stop, search) {
+async function fetchCommodity(start, stop, search, by) {
     let result = {}
     let info = await db.retrieveData('Commodity')
+    info = _.filter(info, (s) => {
+        return s.By === by
+    })
     if (search) {
         info = _.filter(info, (s) => {
             return s.CName.toString().indexOf(search) >= 0
@@ -56,9 +60,12 @@ async function addSupplier(params) {
     return !!info['_id']
 }
 
-async function fetchSupplier(start, stop, search) {
+async function fetchSupplier(start, stop, search, by) {
     let result = {}
     let info = await db.retrieveData('Supplier')
+    info = _.filter(info, (s) => {
+        return s.By === by
+    })
     if (search) {
         info = _.filter(info, (s) => {
             return s.SName.toString().indexOf(search) >= 0
@@ -87,9 +94,26 @@ async function addOrder(params) {
     return !!info['_id']
 }
 
-async function fetchOrder(start, stop, search) {
+async function editOrder(whereStr, updateStr) {
+    let result = await db.updateData('Order', whereStr, updateStr)
+    return !!result.ok
+}
+
+async function fetchOrder(start, stop, search, status, by) {
     let result = {}
     let info = await db.retrieveData('Order')
+    info = _.filter(info, (s) => {
+        return s.By === by
+    })
+    if (status == 3) {
+        info = _.filter(info, (s) => {
+            return _.eq(s.status, 3)
+        })
+    } else if (status == 5) {
+        info = _.filter(info, (s) => {
+            return _.eq(s.status, 5)
+        })
+    }
     if (search) {
         info = _.filter(info, (s) => {
             return s.SName.toString().indexOf(search) >= 0
@@ -108,15 +132,26 @@ async function addPurchase(params) {
     return !!info['_id']
 }
 
-async function fetchPurchase(start, stop, search) {
+async function fetchPurchase(start, stop, search, searchid, by) {
     let result = {}
     let info = await db.retrieveData('Purchase')
+    info = _.filter(info, (s) => {
+        return s.By === by
+    })
     if (search) {
         info = _.filter(info, (s) => {
             if (!s.orderName) {
                 return null
             }
             return s.orderName.toString().indexOf(search) >= 0
+        })
+    }
+    if (searchid) {
+        info = _.filter(info, (s) => {
+            if (!s.orderID) {
+                return null
+            }
+            return s.orderID == searchid
         })
     }
     result.count = _.size(info)
@@ -140,9 +175,12 @@ async function addContract(params) {
     return !!info['_id']
 }
 
-async function fetchContract(start, stop, search, action) {
+async function fetchContract(start, stop, search, action, by) {
     let result = {}
     let info = await db.retrieveData('Contract')
+    info = _.filter(info, (s) => {
+        return s.By === by
+    })
     if (action === 'doing') {
         info = _.filter(info, (s) => {
             return _.eq(s.type, 0)
