@@ -128,6 +128,22 @@ async function fetchOrder(start, stop, search, status, by) {
 }
 
 async function addPurchase(params) {
+    let comms = _.cloneDeep(params.comms)
+    await Promise.all(_.map(comms, async (item) => {
+        let info = await db.retrieveData('Commodity', {id: item.id})
+        if (info[0]) {
+            if (info[0].CName !== item.CName) {
+                return `${item.CName}商品信息有误`
+            } else {
+                item.count = info[0].count + item.count
+                await db.updateData('Commodity', {id: item.id}, item)
+            }
+        }
+        if (!info || _.size(info) || !info[0]) {
+            item.By = params.By
+            await db.createData('Commodity', item)
+        }
+    }))
     let info = await db.createData('Purchase', params)
     return !!info['_id']
 }
