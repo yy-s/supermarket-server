@@ -152,11 +152,11 @@ exports.addOrder = async function (req, res) {
     }
 }
 exports.fetchOrder = async function (req, res) {
-    let {page, pageSize, search, status, by} = req.body
+    let {page, pageSize, search, status, by, supplier} = req.body
     try {
         let start = (page - 1) * pageSize
         let stop = page * pageSize
-        let result = await superMarket.fetchOrder(start, stop, search, status, by)
+        let result = await superMarket.fetchOrder(start, stop, search, status, by, supplier)
         if (!result || _.size(result) === 0) {
             res.status(200).json({
                 'code': 3,

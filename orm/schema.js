@@ -28,6 +28,7 @@ let Purchase = new mongoose.Schema({
 		CDPerson: String,
 		SHPerson: String,
 		LRPerson: String,
+		price: Number,
     By: String
 })
 // 合同
@@ -53,6 +54,8 @@ let Order = new mongoose.Schema({
 		action: Number,
 		status: Number,
 		supplier: String,
+		msg: String,
+		isPass: String,
     By: String
 })
 // 供应商

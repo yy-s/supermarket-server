@@ -99,11 +99,16 @@ async function editOrder(whereStr, updateStr) {
     return !!result.ok
 }
 
-async function fetchOrder(start, stop, search, status, by) {
+async function fetchOrder(start, stop, search, status, by, supplier) {
     let result = {}
     let info = await db.retrieveData('Order')
     info = _.filter(info, (s) => {
-        return s.By === by
+        if (supplier) {
+            return s.supplier === supplier
+        } else {
+            return s.By === by
+        }
+        
     })
     if (status == 3) {
         info = _.filter(info, (s) => {
