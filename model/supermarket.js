@@ -140,11 +140,11 @@ async function addPurchase(params) {
             if (info[0].CName !== item.CName) {
                 return `${item.CName}商品信息有误`
             } else {
-                item.count = info[0].count + item.count
+                item.count = _.toInteger(info[0].count) + _.toInteger(item.count)
                 await db.updateData('Commodity', {id: item.id}, item)
             }
         }
-        if (!info || _.size(info) || !info[0]) {
+        if (!info || !_.size(info) || !info[0]) {
             item.By = params.By
             await db.createData('Commodity', item)
         }
